@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Silka";
+    font-weight: Bold;
+    src: url(Assets/silka-bold-webfont.ttf)
+}
+
+@font-face {
+    font-family: "Silka";
+    font-weight: Semibold;
+    src: url(Assets/silka-semibold-webfont.ttf)
+}
+
+@font-face {
+    font-family: "Silka";
+    font-weight: Medium;
+    src: url(Assets/silka-medium-webfont.ttf)
+}
+
+@font-face {
+    font-family: "Silka";
+    font-weight: Regular;
+    src: url(Assets/silka-regular-webfont.ttf)
+}

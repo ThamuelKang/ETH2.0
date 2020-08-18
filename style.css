@@ -1,0 +1,540 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Silka;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 1800px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+@keyframes hyphen {
+    0% {
+        width: .5em;
+    }
+
+    100% {
+        width: 1em;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(0, 24px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+
+
+
+/* hero section */
+
+.hero {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .7fr 1fr;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.hero svg {
+    transform-origin: top;
+    fill: black;
+    width: 48px;
+    height: auto;
+    margin: 40px auto;
+    overflow: visible;
+    transition: d .5s;
+}
+
+.hero svg:hover path {
+    transition: d .5s;
+    transform-origin: center;
+    height: auto;
+    width: 72px;
+    d: path("M 11.0864 71.9999 C 11.0864 66.9529 9.1974 64.1155 7.01317 62.5173 C 4.74985 60.8613 1.99074 60.4093 0.172821 60.5142 L 0 57.5192 C 2.34875 57.3837 5.83964 57.9414 8.78465 60.0962 C 9.61954 60.7071 10.3975 61.437 11.0864 62.2981 V 0 H 14.0864 V 62.2981 C 14.7753 61.437 15.5533 60.7071 16.3882 60.0962 C 19.3332 57.9414 22.8241 57.3837 25.1728 57.5192 L 25 60.5142 C 23.1821 60.4093 20.423 60.8613 18.1596 62.5173 C 15.9754 64.1155 14.0864 66.9529 14.0864 71.9999 H 11.0864 Z");
+}
+
+.background {
+    background-image: url(assets/background.png);
+    background-size: auto 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.price_chart h1 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto auto auto;
+}
+
+.price_chart h1 span {
+    background-color: white;
+    width: 1em;
+    height: .1em;
+    display: inline-block;
+    vertical-align: middle;
+    animation: hyphen 2s infinite alternate cubic-bezier(0.96, 0, 0.17, 0.97);
+}
+
+
+.current_price {
+    margin: auto;
+    height: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    animation: fadeIn .4s both cubic-bezier(0.96, 0, 0.17, 0.97);
+
+}
+
+.current_price div h2 {
+    font-size: 2em;
+    font-weight: medium;
+}
+
+.price {
+    font-size: 12em;
+}
+
+.price_diff {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #2700FF;
+}
+
+
+/* What is ETH 2.0? */
+
+.ETH {
+    margin-top: 100vh;
+}
+
+.intro {
+    display: flex;
+    width: auto;
+    margin: 50px auto;
+    align-items: center;
+}
+
+.intro img {
+    width: 450px;
+    margin: 0 10px;
+}
+
+
+.cat {
+    position: absolute;
+    z-index: 10;
+    width: 450px;
+    bottom: -60px;
+    left: 45%;
+}
+
+.text {
+    background-color: white;
+    padding: 40px;
+}
+
+.img_container {
+    position: relative;
+}
+
+.grid {
+    position: absolute;
+    width: 350px;
+    left: -8%;
+    bottom: -200px;
+    z-index: -10;
+}
+
+.grid1 {
+    position: absolute;
+    width: 350px;
+    right: -12%;
+    bottom: 20px;
+    z-index: -10;
+}
+
+.text {
+    width: 500px;
+}
+
+#portal {
+    justify-content: end;
+    margin: 0 5% 0 auto;
+}
+
+
+
+/* Serenity Upgrade */
+
+.upgrade_section {
+    max-width: none;
+}
+
+.upgrade_background {
+    margin-top: 140px;
+    background-color: #FFF1FE;
+    width: 100%;
+    padding: 120px 0;
+}
+
+.upgrade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 40px;
+    row-gap: 120px;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.buy {
+    background-image: linear-gradient(to right, black, black, black, #2700FF, #EA38D9, #2700FF);
+    background-size: 300% 100%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 32px;
+    padding: 24px 120px;
+    margin: auto;
+    font-weight: Bold;
+    border-radius: 4px;
+    transition: background-position .4s ease-in-out;
+}
+
+.buy:hover {
+    background-position: 93% 0;
+    transition: background-position .4s ease-in-out;
+    /* box-shadow: 10px 10px black, 20px 20px #EA38D9, 30px 30px #2700FF */
+}
+
+.upgrade_info {
+    margin: 24px auto;
+    max-width: 500px;
+}
+
+.upgrade_text {
+    margin: auto;
+    max-width: 500px;
+}
+
+li {
+    margin-bottom: 32px;
+}
+
+
+
+
+
+/* blog */
+
+.resources {
+    width: 90%;
+    margin-top: 120px;
+    margin-bottom: 200px;
+    overflow: visible;
+}
+
+.blog img {
+    width: 100%;
+    height: auto;
+}
+
+.resources .upgrade a {
+    text-decoration-line: none;
+    color: black;
+    transition: all .2s;
+}
+
+.resources .upgrade a:hover {
+    box-shadow: 0 0 36px rgba(234, 56, 217, .08);
+}
+
+.resources h1 {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.blog {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 18px 18px 36px 18px;
+    border-radius: 4px;
+}
+
+
+
+/* scroll bar  */
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-image: linear-gradient(180deg, #FFF1FE, #2700FF);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
+
+
+
+/* responsive design */
+
+@media only screen and (max-width: 1100px) {
+
+    .grid,
+    .grid1 {
+        display: none;
+    }
+
+    .intro {
+        margin: 0 auto;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .cat {
+        width: 400px;
+    }
+
+    .portal_cat {
+        width: 400px;
+    }
+
+    .portal {
+        width: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .intro {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .cat {
+        width: 400px;
+        position: static;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .text {
+        padding: 0;
+        width: 500px;
+    }
+
+    #portal {
+        margin: 0 auto;
+    }
+
+    .img_container {
+        display: block;
+    }
+
+    .portal_cat {
+        display: none;
+    }
+
+    .portal {
+        display: block;
+        width: 400px;
+    }
+
+    .intro img {
+        margin-bottom: 48px;
+    }
+
+    .upgrade_background {
+        padding: 60px 0 80px 0;
+    }
+
+    .upgrade_info {
+        height: auto;
+    }
+
+    .upgrade_text {
+        width: 500px;
+    }
+
+    .upgrade_text h2 {
+        margin: 0 0 16px 0;
+    }
+
+    .upgrade_text p {
+        margin: 0 0 32px 0;
+    }
+
+    .buy {
+        width: 500px;
+        padding: 18px 0;
+        font-size: 1.5em;
+    }
+
+    /* blog */
+
+    .upgrade {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+        margin-top: 24px;
+    }
+
+    .resources {
+        margin: 36px auto;
+    }
+
+    .resources h1 {
+        margin-bottom: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .price_chart h1 {
+        margin: 0 auto;
+        padding: 18px 0;
+    }
+
+    .current_price h2 {
+        font-size: 4em;
+        font-weight: semibold;
+    }
+
+    .price {
+        font-size: 7em;
+    }
+
+    .portal {
+        display: none;
+    }
+
+    .cat {
+        width: 100%;
+    }
+
+    .upgrade_background {
+        padding: 32px 0 48px 0;
+        margin: 60px 0 0 0;
+    }
+
+    .upgrade_background h2 {
+        margin: 0 0 18px 0;
+    }
+
+    .upgrade_background p {
+        margin: 0 0 18px 0;
+    }
+
+    .upgrade_info {
+        height: auto;
+        margin: 0
+    }
+
+    .upgrade {
+        width: 90%;
+    }
+
+    .upgrade_text {
+        width: 90%;
+        margin: 0;
+    }
+
+    .buy {
+        width: 100%;
+        margin: 0;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    li {
+        margin-bottom: 18px;
+    }
+
+    .resources h1 {
+        margin: 52px 0 0 0;
+    }
+
+    .resources .upgrade {
+        width: 100%;
+    }
+
+    .blog {
+        padding: 24px 0;
+    }
+
+    .resources .upgrade a:hover {
+        box-shadow: none;
+    }
+}
